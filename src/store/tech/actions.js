@@ -3,4 +3,13 @@ const addTech = tech => ({
   payload: { tech }
 })
 
-export { addTech }
+const getTechsSuccess = techs => ({
+  type: 'tech/GET_TECHS_SUCCESS',
+  payload: { techs }
+})
+
+const getTechsFailure = () => ({
+  type: 'tech/GET_TECHS_FAILURE'
+})
+
+export { addTech, getTechsSuccess, getTechsFailure }
